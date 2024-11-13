@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+
+    <style>
+        div {
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+<!--
+min-h-screen sınıfı, Tailwind CSS'te bir elemanın minimum yüksekliğini,
+tarayıcı ekranının yüksekliği kadar ayarlamak için kullanılır.
+-->
+
+
+<body class="bg-gray-800  flex flex-col items-center justify-center min-h-screen">
+
+    <div class="bg-gray-200  w-full" style="display: block;"> w-full </div>
+
+    <!-- en iyisi 1/4 yerine yüzdelşik deger vermek w-25 gibi -->
+    <div class="flex flex-row bg-gray-400 w-full p-1 px-2">
+        <div class="basis-1/4 border">01</div>
+        <div class="basis-1/4 border">02</div>
+        <div class="basis-1/2 border">03</div>
+    </div>
+
+    <div class="flex flex-row bg-gray-400 w-full p-1 px-2">
+        <div class="w-1/2 border">01</div>
+        <div class="w-1/4 border">02</div>
+        <div class="w-1/4 border">03</div>
+    </div>
+
+    <div class="flex w-full bg-blue-400">
+        <div class="w-[20%] border">yuzde 20</div>
+        <div class="w-[50%] border">yuzde 50</div>
+        <div class="w-[30%] border">yuzde 30</div>
+    </div>
+
+
+    <div class="flex">
+        <div class=" bg-gray-200 basis-1/2 hover:basis-1/2">
+            fsdfasdf
+        </div>
+    </div>
+
+    <div class="flex">
+        <div class="flex-none w-14 bg-gray-200">
+            01
+        </div>
+        <div class="flex-initial w-64 bg-gray-400">
+            02
+        </div>
+        <div class="flex-initial w-32 bg-gray-700">
+            03
+        </div>
+    </div>
+    ​
+
+
+
+
+
+
+</body>
+
+
+
+</html>

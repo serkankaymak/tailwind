@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+
+    <style>
+        div {
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+<!--
+min-h-screen sınıfı, Tailwind CSS'te bir elemanın minimum yüksekliğini,
+tarayıcı ekranının yüksekliği kadar ayarlamak için kullanılır.
+-->
+
+
+<body class="bg-gray-800  flex flex-col items-center justify-center min-h-screen">
+
+    <div class="container mx-auto bg-gray-200 p-4">
+        <p>Bu bir container örneğidir.</p>
+    </div>
+
+    <div class="container mx-auto bg-gray-100 p-4">
+        <p>Bu, ortalanmış bir container örneğidir.</p>
+    </div>
+
+
+    <div class="container mx-auto bg-gray-100 p-4">
+        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+            <div class="flex-1 bg-blue-200 p-4">Sol Alan</div>
+            <div class="flex-1 bg-green-200 p-4">Sağ Alan</div>
+        </div>
+    </div>
+
+
+
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8 bg-gray-100">
+        <p>Bu container, küçük ekranlarda az, büyük ekranlarda daha fazla padding içerir.</p>
+    </div>
+
+
+    <div class="container mx-auto bg-gray-100 p-8">
+        <h2 class="text-2xl font-bold mb-4">Başlık</h2>
+        <p class="mb-4">Bu, başlık altındaki açıklama paragrafıdır.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-blue-200 p-4">İçerik 1</div>
+            <div class="bg-green-200 p-4">İçerik 2</div>
+            <div class="bg-yellow-200 p-4">İçerik 3</div>
+        </div>
+    </div>
+
+
+    <div class="w-full bg-gray-300 py-8">
+        <div class="container mx-auto bg-white p-4 shadow-lg">
+            <h2 class="text-xl font-semibold">Ortalanmış İçerik</h2>
+            <p>Bu içerik, geniş bir arka planla ortalanmış durumda.</p>
+        </div>
+    </div>
+
+    <div class="container mx-auto p-6 bg-gray-50">
+        <h2 class="text-2xl font-semibold mb-6">Kartlar</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div class="bg-white p-4 shadow-md">Kart 1</div>
+            <div class="bg-white p-4 shadow-md">Kart 2</div>
+            <div class="bg-white p-4 shadow-md">Kart 3</div>
+            <div class="bg-white p-4 shadow-md">Kart 4</div>
+        </div>
+    </div>
+
+
+    <div class="container mx-auto p-8 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold">Özel Arka Plan</h2>
+        <p>Bu container, degrade arka plana ve yuvarlatılmış köşelere sahiptir.</p>
+    </div>
+
+
+    <div class="container mx-auto p-4 bg-gray-100">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-blue-200 p-4">Sol Sütun</div>
+            <div class="bg-green-200 p-4">Sağ Sütun</div>
+        </div>
+    </div>
+
+
+</body>
+
+
+
+</html>

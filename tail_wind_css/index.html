@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+</head>
+
+
+<!--
+min-h-screen sınıfı, Tailwind CSS'te bir elemanın minimum yüksekliğini,
+tarayıcı ekranının yüksekliği kadar ayarlamak için kullanılır.
+-->
+
+
+<body class="bg-gray-800  flex flex-col items-center justify-center min-h-screen">
+    <!-- normalde siyah ama sm ye kadar beyaz renkte sin-->
+    <div class="text-white p-4 m-2  w-1/2 flex justify-center rounded bg-white sm:bg-black">
+        <button class="bg-blue-900 text-white p-3 rounded hover:bg-red-700  ">
+            Hola!!
+        </button>
+    </div>
+
+    <div class="bg-white hover:bg-blue-900  md:hover:bg-red-400">
+        hola2
+    </div>
+
+
+    <!-- benzer stilleri bir araya toplayarak CSS’de bir sınıf olarak tanımlayabilirsiniz.-->
+    <!-- PostCSS yapılandırması gerekli -->
+    <style>
+        .btn-primary {
+            @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+        }
+    </style>
+    <button class="btn-primary">
+        primary
+    </button>
+
+
+
+
+
+</body>
+
+
+
+</html>
